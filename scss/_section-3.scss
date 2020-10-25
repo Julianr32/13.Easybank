@@ -34,6 +34,12 @@
         font-weight: var(--regular-fnt);
         line-height: 1;
         margin: 1rem 0;
+        transition: all 0.15s;
+
+        &:hover {
+          cursor: pointer;
+          color: var(--bright-cyan);
+        }
       }
     }
   }

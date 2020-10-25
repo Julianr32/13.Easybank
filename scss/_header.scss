@@ -1,5 +1,4 @@
 /* ===HEADER=== */
-
 .nav {
   height: 10vh;
   padding: 0 1rem;
@@ -56,9 +55,21 @@
       }
       .nav__item a {
         color: var(--gray-blue);
+        position: relative;
+        transition: all 0.25s;
 
-        &:hover {
-          color: var(--dark-blue);
+        &:hover::after {
+          content: "";
+          position: absolute;
+          bottom: -150%;
+          left: 0;
+          height: 5px;
+          width: 100%;
+          background: linear-gradient(
+            to right,
+            var(--lime-green),
+            var(--bright-cyan)
+          );
         }
       }
     }
@@ -101,6 +112,7 @@
   }
 
   @media (min-width: 768px) {
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
